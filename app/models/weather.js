@@ -12,11 +12,9 @@ export default class Weather {
     this.kelvin = data.main.temp
   }
 
-  get USTemplate () {
-  return
-  }
-
-  get WorldTemplate () {
-    return
+  get Template () {
+  return /*html*/`
+    <div class="display-5">${this.city}: ${this.kelvin}</div>
+    `
   }
 }
