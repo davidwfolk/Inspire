@@ -7,6 +7,7 @@ const _quoteApi = axios.create({
   timeout: 3000
 });
 
+// @ts-ignore
 const _BibleApi = axios.create({
   baseURL: "//beta.ourmanna.com/api/v1/get/?format=text&order=random",
   timeout: 3000
@@ -20,9 +21,8 @@ class QuoteService {
     //   console.log("bible", res);
     _quoteApi.get()
     .then(res => {
-      console.log("quote",res.data);
-      let quotes = res.data.data.map (rawQuoteData => new Quote (rawQuoteData))
-      store.commit('quotes', quotes)
+      console.log("quote",res.data.quote);
+      store.commit('quotes', new Quote(res.data.quote))
       
     })
       

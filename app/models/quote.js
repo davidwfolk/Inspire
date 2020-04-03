@@ -5,13 +5,13 @@ export default class Quote {
     this.author = data.author
 
   }
+
   get Template () {
     return /*html*/ `
       <div class=col-12>
-      <div class="display-5">${this.body}</div>
-      <div class="display-5">${this.author}</div>
+      <div class="display-5">"${this.body}"</div>
+      <div class="display-5">-${this.author}</div>
     </div>
-    
     `
   }
 

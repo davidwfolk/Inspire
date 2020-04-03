@@ -7,8 +7,7 @@ import store from "../store.js";
 function _drawQuote() {
   console.log("THE WEATHER MAN SAYS:", store.State.quotes);
   let quote = store.State.quotes;
-  let template = ''
-  document.getElementById('quote').innerHTML = quote.
+  document.getElementById('quote').innerHTML = quote.Template
 }
 export default class QuoteController {
   constructor() {
