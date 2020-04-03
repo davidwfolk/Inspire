@@ -2,3 +2,9 @@
   color: red;
   font-size: 2em;
 }
+
+.todos-form {
+  position: fixed;
+     bottom: 10;
+     right: 10;
+}
