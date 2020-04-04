@@ -7,13 +7,14 @@ function _drawImage() {
   // console.log("pretty photo", store.State.images);
   // let image = store.State.images;
   // document.getElementById('bg-image').innerHTML = `<body`
-  let template = ""
-  let photo = store.State.photo.url;
-  document.querySelector("#sandBoxPic").innerHTML = template += `<img src="${photo}" class="photo">`
+  // let template = ""
+  // let image = store.State.images
+  // document.getElementById("bg-image").innerHTML = image.Template
+
 }
 export default class ImageController {
   constructor() {
     ImageService.getImage();
-    store.subscribe('quotes', _drawImage)
+    store.subscribe('images', _drawImage)
   }
 }

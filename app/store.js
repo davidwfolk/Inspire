@@ -10,8 +10,9 @@ let _state = {
   todos: [], //TODO change 'any' to your todo model
   /**@type {Quote} */
   quotes: ({ }),
-  /**@type {Image[]} */
-  images: []
+  /**@type {Image} */
+  // @ts-ignore
+  images: [{ }]
 };
 
 /** Collection of listeners to be called based on keyed state changes

@@ -5,7 +5,7 @@ import store from "../store.js";
 //      (be sure to review the HTML as an element already was put there for you)
 
 function _drawQuote() {
-  console.log("THE WEATHER MAN SAYS:", store.State.quotes);
+  console.log("Quote of the Day:", store.State.quotes);
   let quote = store.State.quotes;
   document.getElementById('quote').innerHTML = quote.Template
 }

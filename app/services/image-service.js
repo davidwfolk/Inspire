@@ -11,8 +11,8 @@ class ImageService {
   getImage(){
     imgApi.get()
     .then(res => {
-        console.log("image",res.data);
-        store.commit('image', (res.data))
+        console.log("Photo of the Day",res.data);
+        store.commit('images', new Image(res.data))
   })
   }
   constructor () {
