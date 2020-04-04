@@ -7,9 +7,9 @@ function _drawImage() {
   // console.log("pretty photo", store.State.images);
   // let image = store.State.images;
   // document.getElementById('bg-image').innerHTML = `<body`
-  // let template = ""
-  // let image = store.State.images
-  // document.getElementById("bg-image").innerHTML = image.Template
+  let template = ""
+  let image = store.State.images
+  document.getElementById("bg-image").innerHTML += image.Template
 
 }
 export default class ImageController {
