@@ -7,10 +7,11 @@ function _drawImage() {
   // console.log("pretty photo", store.State.images);
   // let image = store.State.images;
   // document.getElementById('bg-image').innerHTML = `<body`
-  let template = ""
-  let image = store.State.images
-  document.getElementById("bg-image").innerHTML += image.Template
-
+  // let template = ""
+  let image = store.State.images.image
+  debugger
+  document.body.style.backgroundImage = `url('${store.State.images.image}')`
+  // innerHTML +=`<body style='background-image: url(${image}); height: 100vh; width: 100%;'>`
 }
 export default class ImageController {
   constructor() {
