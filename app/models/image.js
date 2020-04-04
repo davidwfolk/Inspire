@@ -1,6 +1,5 @@
 export default class Image {
   constructor (data) {
-    debugger
     this.image = data.large_url
    }
 

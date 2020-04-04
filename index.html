@@ -14,27 +14,39 @@
 </head>
 
 	
-	<body id='bg-image'>
+	<body id='bg-image'  style="height: 100vh; width: 100%;">
+		<div class='bg-transparent'>
 
-			<div id="weather">
-				Your Weather Template
-			</div>
-			
-			<div id="quote">
-				The Quote
-			</div>
-			
-			<div class="col-12 col-md-3 todos-form">
-				<div id="todo-error"></div>
-				<form class="bg-dark" onsubmit="app.todoController.addTodo(event)">
+			<!-- Quote -->
+			<div class="container-fuid">
+				<div class="row">			
 					
-					<div class="form-group pt-3">
-						<input type="text" name="desc" class="form-control form-control-sm bg-transparent border-transparent" placeholder="Enter list name here...">
-						<ul class="pb-3 text-dark" id="todos"></ul>
-						
-					</div>
-				</form>
+					<div id="quote" class="col-4 ml-auto text-warning text-right bg-quote">The Quote</div>
+				</div>
 			</div>
+			<!-- Weather -->
+			<div class="container-fuid">
+				<div class="row weather-form">
+					<div id="weather" class="col-12 text-light bg-weather">Your Weather Template</div>
+				</div>
+			</div>
+			<!-- ToDo list -->
+			<div class="container-fuid">
+				<div class="row todos-form">		
+					<div class="col-12 p-3">
+						<!--	<div id="todo-error"></div> -->	
+						<form class="bg-dark rounded pr-2 pl-2" onsubmit="app.todoController.addTodo(event)">
+						
+							<div class="form-group pt-3">
+								<input type="text" name="desc" class="form-control form-control-sm bg-transparent border-transparent" placeholder="Enter list name here...">
+								<ul class="pb-3 text-dark" id="todos"></ul>
+								
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			
 			
 			
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
@@ -43,6 +55,6 @@
 			<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
 			<script src='https://use.fontawesome.com/releases/v5.12.1/js/all.js' data-auto-replace-svg></script>
 			<script type='module' src='app/main.js'></script>
-			</div>
+		</div>
 		</body>
 		</html>

@@ -14,7 +14,7 @@ export default class Weather {
 
   get Template () {
   return /*html*/`
-    <div class="display-5">${this.city}: ${this.kelvin}</div>
+    <div class="display-5">${this.city}: <span class="text-info">${this.kelvin}</span></div>
     `
   }
 }
