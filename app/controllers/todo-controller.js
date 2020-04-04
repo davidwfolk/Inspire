@@ -6,9 +6,15 @@ function _drawTodos() {
   console.log(store.State.todos);
   let todos = store.State.todos;
   let template = ''
+  
 
+  document.getElementById('todos-count').innerHTML =`<div class="text-white">Todos To Do: ${store.State.todos.length}`
   todos.forEach(todos => {template += todos.TodoTemplate})
   document.getElementById('todos').innerHTML = template
+  
+ 
+
+
 }
 
 export default class TodoController {

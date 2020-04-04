@@ -14,9 +14,10 @@
 </head>
 
 	
-	<body id='bg-image'  style="height: 100vh; width: 100%;">
+	<body id='bg-image'  style="background-size: cover;">
 		<div class='bg-transparent'>
-
+			<!-- Clock -->
+			<div id='clock'></div>
 			<!-- Quote -->
 			<div class="container-fuid">
 				<div class="row">			
@@ -35,12 +36,14 @@
 				<div class="row todos-form">		
 					<div class="col-12 p-3">
 						<!--	<div id="todo-error"></div> -->	
-						<form class="bg-dark rounded pr-2 pl-2" onsubmit="app.todoController.addTodo(event)">
 						
-							<div class="form-group pt-3">
-								<input type="text" name="desc" class="form-control form-control-sm bg-transparent border-transparent" placeholder="Enter list name here...">
-								<ul class="pb-3 text-dark" id="todos"></ul>
-								
+						<form class="bg-dark rounded pr-2 pl-2 pb-1" onsubmit="app.todoController.addTodo(event)">
+						<div class="form-group ">
+							<h5 class="text-white text-center">Items on the Docket:</h5>
+							<ul class="p-0 text-center" id="todos-count"></ul>
+							<ul class="text-dark p-0" id="todos"></ul>
+							<input type="text" name="desc" class="form-control form-control-sm bg-transparent border-transparent" placeholder="Enter list name here...">
+							
 							</div>
 						</form>
 					</div>
