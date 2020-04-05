@@ -7,9 +7,17 @@ function _drawTodos() {
   let todos = store.State.todos;
   let template = ''
   
+  todos.forEach(td => {
+    if(td.completed) {
+      template += td.TodoTemplateChecked
+    }
+    else {
+      template +=td.TodoTemplate
+    }
+  
+  })
 
   document.getElementById('todos-count').innerHTML =`<div class="text-white">Todos To Do: ${store.State.todos.length}`
-  todos.forEach(todos => {template += todos.TodoTemplate})
   document.getElementById('todos').innerHTML = template
   
  
@@ -29,7 +37,7 @@ export default class TodoController {
     var form = e.target;
     var todo = {
       //TODO build the todo object from the data that comes into this method
-    description: form.desc.value,
+    description: form.desc.value
     };
     TodoService.addTodoAsync(todo);
     form.reset()

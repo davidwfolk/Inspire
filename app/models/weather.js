@@ -10,11 +10,12 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.f = Math.round(((this.kelvin - 273.15) * (9 / 5) + 32)) //is this allowed?
   }
 
   get Template () {
   return /*html*/`
-    <div class="display-5">${this.city}: <span class="text-info">${this.kelvin}</span></div>
+    <div class="display-5">${this.city}: <span class="text-warning">${this.f}*F</span></div>
     `
   }
 }
